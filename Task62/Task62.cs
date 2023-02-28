@@ -8,27 +8,27 @@
 Console.Clear();
 
 int n = 4;
-int[,] sqareMatrix = new int[n, n];
+int[,] sqMatrix = new int[n, n];
 
 int temp = 1;
 int i = 0;
 int j = 0;
 
-while (temp <= sqareMatrix.GetLength(0) * sqareMatrix.GetLength(1))
+while (temp <= sqMatrix.GetLength(0) * sqMatrix.GetLength(1))
 {
-  sqareMatrix[i, j] = temp;
+  sqMatrix[i, j] = temp;
   temp++;
-  if (i <= j + 1 && i + j < sqareMatrix.GetLength(1) - 1)
+  if (i <= j + 1 && i + j < sqMatrix.GetLength(1) - 1)
     j++;
-  else if (i < j && i + j >= sqareMatrix.GetLength(0) - 1)
+  else if (i < j && i + j >= sqMatrix.GetLength(0) - 1)
     i++;
-  else if (i >= j && i + j > sqareMatrix.GetLength(1) - 1)
+  else if (i >= j && i + j > sqMatrix.GetLength(1) - 1)
     j--;
   else
     i--;
 }
 
-WriteArray(sqareMatrix);
+WriteArray(sqMatrix);
 
 void WriteArray (int[,] array)
 {
